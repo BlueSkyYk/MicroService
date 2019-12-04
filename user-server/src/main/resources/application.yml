@@ -1,0 +1,9 @@
+#服务端口
+server:
+  port:9001
+
+#服务名称
+spring:
+  application:
+    name: user_server
+

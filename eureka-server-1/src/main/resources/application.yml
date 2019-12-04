@@ -1,0 +1,31 @@
+#服务端口号
+server:
+  port: 8001
+
+#服务名称
+spring:
+  application:
+    name: eureka-server
+
+#Eureka
+eureka:
+  instance:
+    #Eureka示例名
+    hostname: eureka-server-1
+    #续约时间
+    #    lease-expiration-duration-in-seconds: 90
+    #定时任务时间，每隔多少秒去重新刷新续约时间
+    #    lease-renewal-interval-in-seconds: 30
+  #客户端
+  client:
+    #是否开启服务注册，true表示自己注册自己
+    #    register-with-eureka: false
+    #是否拉取服务列表
+    #    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8002/eureka/
+    #每隔多少秒去刷新获取服务列表时间
+    #    registry-fetch-interval-seconds: 30
+  server:
+    #是否开启安全保护，默认是开启的，开启后如果服务列表中有服务断开了，依旧会保存
+    enable-self-preservation: false

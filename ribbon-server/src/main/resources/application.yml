@@ -1,0 +1,18 @@
+#服务端口
+server:
+  port: 8100
+
+#服务名称
+spring:
+  application:
+    name: ribbon-server
+
+pro
+providers:
+  ribbon:
+    listOfServer: localhost:8001,localhost:8002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/,http://localhost:8002/eureka/
